@@ -2,8 +2,7 @@ import math
 import sys
 def Merge(A, p, q, r):
     n1 = q - p + 1
-    n2 = r - q
-    
+    n2 = r - q 
     # Create new arrays L and R
     L = [0]*(n1+1)
     R = [0]*(n2+1)
@@ -14,13 +13,10 @@ def Merge(A, p, q, r):
     for j in range(n2):
         R[j] = A[q + j+1]
     
-    # Set sentinel values for L and R
     L[n1] = sys.maxsize
     R[n2] = sys.maxsize
-    
     i = 0
-    j = 0
-    
+    j = 0  
     # Merge the two arrays back into A
     for k in range(p, r + 1):
         if L[i] <= R[j]:
@@ -29,10 +25,6 @@ def Merge(A, p, q, r):
         else:
             A[k] = R[j]
             j += 1
-
-
-
-
 
 def MergeSort (A, p, r):
     if p<r:

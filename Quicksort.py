@@ -3,7 +3,7 @@ def partition(array, p, r):
     pivot = array[r]
 
     # Pointer for greater element
-    i = p - 1
+    i = p-1
 
     for j in range(p, r):
         if array[j] <= pivot:
